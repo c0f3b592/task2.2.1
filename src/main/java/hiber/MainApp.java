@@ -22,21 +22,11 @@ public class MainApp {
 
       List<User> users = userService.listUsers();
       for (User user : users) {
-         System.out.println("Id = "+user.getId());
-         System.out.println("First Name = "+user.getFirstName());
-         System.out.println("Last Name = "+user.getLastName());
-         System.out.println("Email = "+user.getEmail());
-         System.out.println("Car = "+user.getCar());
-         System.out.println();
+         System.out.println(user);
       }
 
-      User user = userService.getUserByCar("user1Car", 1111);
-      System.out.println("Id = "+user.getId());
-      System.out.println("First Name = "+user.getFirstName());
-      System.out.println("Last Name = "+user.getLastName());
-      System.out.println("Email = "+user.getEmail());
-      System.out.println("Car = "+user.getCar());
-      System.out.println();
+      User user = userService.getUserByCar("user2Car", 2222);
+      System.out.println(user);
 
 
       context.close();
